@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./img/fifa-world-cup-2026-logo.png">
+    <title>2026 World Cup</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><button id="theme-button">Toggle Dark Mode</button></li>
+        </ul>
+    </div>
+
+    <div class="header" id="header">
+        <div class="header-top">
+            <img id="header-img" src="./img/fifa-world-cup-2026-logo.png" alt="FIFA World Cup 2026 Logo" />
+            <h1 class="header-title">The 2026 World Cup</h1>
+        </div>
+        <h2 class="slogan">WE ARE 26 🇺🇸 • SOMOS 26 🇲🇽 • NOUS SOMMES 26 🇨🇦</h2>
+        <div class="countdown-container">
+            <h3 class="countdown-title">Tournament Begins In:</h3>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">000</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button type="button" onclick="window.open('https://auth.fifa.com/as/authorize?response_type=code&response_mode=form_post&client_id=51dcafd9-c39a-43d9-8e91-fafac25c436f&scope=openid&lang=en&redirect_uri=https%3A%2F%2Fwww.fifa.com&campaign=Fifacom-Web-ROIFWC2026ROI&intcmp=%28p_fifacom%29_%28d_%29_%28c_webheader-fwc2026%29_%28sc_tickets%29_%28ssc_%29_%28sssc_%29_%28l_en%29_%28da_21052025%29')" class="button">Buy Tickets</button>
+        <button class="button" onclick="window.location.href='#rsvp'">Stay Tuned</button>
+    </div>
+    
+    <div class="about" id="about">
+        <h2>About the Event</h2>
+        <p>
+            The 2026 World Cup is an international soccer tournament that will be hosted jointly by the United States,
+            Canada, and Mexico. It marks the first time the tournament will feature 48 teams, expanding from the traditional 32.
+            As one of the most watched sporting events in the world, it brings together fans from every continent to
+            celebrate the spirit of the game. The event is aimed at soccer enthusiasts of all ages, from lifelong supporters to new fans discovering the sport.
+        </p>
+        <iframe src="https://player.vimeo.com/video/1099084995?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" allowfullscreen></iframe>
+    </div>
+
+    <div class="moreinfo">
+        <h3 class="northa">"North America Hosts Football's Biggest Stage"</h3>
+        <img src="./img/wcmap_schedule-scaled-1-1280x1024.jpg" alt="World Cup 2026 Schedule" />
+        <h4>
+            <span class="bigger">Bigger</span>.
+            <span class="bolder">Bolder</span>.
+            <span class="united">United</span>
+        </h4>
+    
+        <ul>
+            <li><strong>First-Ever 48-Team Tournament:</strong> <em>The 2026 World Cup will feature 48 teams, expanded from the
+                traditional 32, making it the largest tournament in FIFA history.</em></li>
+            <li><strong>Hosted by Three Nations:</strong> <em>The event will be jointly hosted by the United States, Canada, and
+                Mexico—the first time three countries have co-hosted a World Cup.</em></li>
+            <li><strong>Kicks Off at Estadio Azteca:</strong> <em>The tournament begins on June 11, 2026, with the opening match at
+                Mexico City's Estadio Azteca, a historic stadium that also hosted openers in 1970 and 1986.</em></li>
+        </ul>
+    </div>
+
+    <div class="schedule" id="schedule">
+        <h2>Event Schedule</h2>
+        <img alt="Match Schedule" src="./img/FIFA-World-Cup-26-match-schedule.jpeg" />
+    </div>
+
+    <div class="tournament-container">
+        <div class="opener tournament-stage">
+            <h3>⚽ Opener / Matchday 1</h3>
+            <ul>
+                <li>📍 Stadium: Estadio Azteca, Mexico City</li>
+                <li>📅 Date: June 11, 2026</li>
+                <li>🏟️ Significance: The first match and opening ceremony of the tournament</li>
+            </ul>
+            <img alt="Estadio Azteca" src="./img/0341f3b1ea691d2fed0ca75cca36aa76.jpg" />
+        </div>
+
+        <div class="tournament-flex">
+            <div class="gpstage tournament-stage">
+                <h3>⚽ Group Stage</h3>
+                <p>📋 Format Overview:</p>
+                <ul>
+                    <li>48 teams are divided into 12 groups of 4 teams each.</li>
+                    <li>Each team plays 3 matches — one against every other team in their group.</li>
+                    <li>Matches are awarded 3 points for a win, 1 for a draw, and 0 for a loss.</li>
+                    <li>The top 2 teams from each group, along with the 8 best third-placed teams,
+                        advance to the Round of 32 (new format due to expansion).</li>
+                </ul>
+            </div>
+
+            <div class="r32 tournament-stage">
+                <h3>⚽ Round of 32</h3>
+                <p>📋 Format Overview:</p>
+                <h5>Debut stage in 2026 due to expanded 48-team format.</h5>
+                <ul>
+                    <li>32 teams: Top 2 from each group (12 total) + 8 best third-place teams.</li>
+                    <li>Single-elimination: One match per pairing — win or go home.</li>
+                    <li>If tied after 90 minutes: Extra time, then penalty shootout if needed.</li>
+                </ul>
+            </div>
+
+            <div class="r16 tournament-stage">
+                <h3>⚽ Round of 16</h3>
+                <p>📋 Format Overview:</p>
+                <ul>
+                    <li>16 teams: Winners from Round of 32 advance.</li>
+                    <li>Single-elimination: One match per pairing — win or go home.</li>
+                    <li>Penalties after extra time.</li>
+                </ul>
+            </div>
+
+            <div class="qf tournament-stage">
+                <h3>⚽ Quarter-Finals</h3>
+                <p>📋 Format Overview:</p>
+                <ul>
+                    <li>8 teams remain.</li>
+                    <li>Elite matchups between world-class teams.</li>
+                    <li>National legends are often made here.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sf tournament-stage">
+            <h3>⚽ Semi-Finals</h3>
+            <p>📋 Format Overview:</p>
+            <ul>
+                <li>4 teams compete for a place in the final.</li>
+                <li>Losers of the semi-finals still play in a third-place match.</li>
+                <li>Emotional and tactical battles, as nations get one step from glory.</li>
+            </ul>
+        </div>
+
+        <div class="final tournament-stage">
+            <h3>The Final</h3>
+            <ul>
+                <li>📅 Date: Sunday, July 19, 2026</li>
+                <li>📍 Venue: MetLife Stadium, East Rutherford, New York/New Jersey metro</li>
+                <li>🏟️ Significance: This will be the first-ever FIFA World Cup Final held in the New York US metro area</li>
+            </ul>
+            <h4>"The Champion of the World is Crowned"</h4>
+            <img alt="The World Cup Trophy" src="./img/gettyimages-1450284950-612x612.jpg" />
+        </div>
+    </div>
+    
+    <div class="rspv" id="rsvp">
+    <h2>RSVP</h2>
+    <div id="rsvp">
+        <!--<h2>RSVP</h2>-->
+        <p id="rsvp-count">Be the first one to sign up for this event!</p>
+    <!-- rest of your RSVP content -->
+    </div>
+    <div class="rsvp-container">
+        <div class="rsvp-para">
+            <p>Join us for the most anticipated sporting event of the decade!
+                 The 2026 FIFA World Cup will bring together nations from 
+                 around the world for an unforgettable celebration of football.
+                  Be part of history as the United States, Canada, and Mexico co-host this incredible tournament. 
+                  Sign up below to receive exclusive updates, early access to tickets, and special event information. 
+                  Don't miss your chance to witness greatness!</p>
+        </div>
+        <div class="rsvp-participants">
+            <p></p>
+        </div>
+    </div>
+
+<!--- Sign RSVP Form --->
+   <form id="rsvp-form" title="rsvp-form">
+        <div class="form-field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+    
+        <div class="form-field">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+    
+        <div class="form-field">
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+    
+        <div class="form-field">
+            <label for="favorite-team">Favorite Team:</label>
+            <input type="text" id="favorite-team" name="favorite-team">
+        </div>
+    </form>
+    <!-- Submit button -->
+        <button id="rsvp-button">Submit RSVP</button>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-container">
+            <button id="close-modal-btn" class="modal-close-btn">×</button>
+            <div class="modal-item">
+                <p id="modal-text">Thanks for your RSVP!</p>
+            </div>
+            <div class="modal-item">
+                <img id="modal-image" src="./img/modal-image.png" alt="Modal Image" />
+            </div>
+        </div>
+    </div>
+
+    <div class="links" id="links">
+        <h2>Links</h2>
+        <div class="links-container">
+            <a class="block"
+                href="https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada">
+                <article>
+                    <h3>FIFA World Cup Official Event Page</h3>
+                    <p>Here you will find all info related to this event from the official page</p>
+                </article>
+            </a>
+
+            <a class="block"
+                href="https://www.foxsports.com/stories/soccer/2026-world-cup-who-has-qualified-who-can-make-it">
+                <article>
+                    <h3>Team Qualifications</h3>
+                    <p>Which teams have qualified and those still in the fight</p>
+                </article>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 FIFA World Cup Fan Site. All rights reserved.</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

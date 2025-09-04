@@ -1,0 +1,771 @@
+html, body {
+    background-color: #fafafa;;
+    color: #333333;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-bottom: 80px;
+    scroll-behavior: smooth;
+}
+
+#header, #about, #schedule, #rsvp, #links {
+    scroll-margin-top: 80px;
+}
+
+a:link {
+    color: #002868;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4a5568;
+}
+
+a:hover {
+    color: #007A33;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #BF0A30;
+}
+
+.navbar {
+    background-color: #000000;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.navbar ul li a:hover {
+    background-color: #007A33;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.navbar button {
+  padding: 12px 12px;
+  text-align: center;
+  background-image: 
+        linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/1920px-Flag_of_the_United_States_%28Web_Colors%29.svg.png');
+  background-size: cover;
+  background-position: center;
+  font-weight: bolder;
+  color: black;
+  border: 1px solid #ffffff;
+  animation: buttonFlagRotate 12s infinite;
+  font-size: 0.9rem;
+  cursor: pointer;
+  justify-items: center;
+}
+
+.navbar button:hover {
+    color: #002868;
+    border: 1px solid #ffffff;
+   transform: translateY(-1px);
+}
+
+
+.header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url(/img/vnlxdxm4acmyclesu8pq.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 400px;
+    justify-content: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#header-img {
+    height: 100px;
+    width: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+h1 {
+    font-family: 'Monaco', monospace;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Monaco', monospace;
+    color: #002868;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    margin: 1rem 0;
+}
+
+h3 {
+    font-family: 'Monaco', monospace;
+    color: #002868;
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin: 0.8rem 0;
+}
+
+h2.slogan {
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    letter-spacing: 1px;
+}
+
+.countdown-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.countdown {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   flex-wrap: nowrap;
+   align-items: center;
+}
+
+.countdown-title{
+    color: black;
+}
+
+.countdown-item {
+   background: rgba(0, 0, 0, 0.8);
+   border: 2px solid #ffd700;
+   border-radius: 12px;
+   padding: 15px 10px;
+   min-width: 80px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+   transition: transform 0.3s ease;
+}
+
+.countdown-item:hover {
+   transform: scale(1.05);
+   border-color: #ffffff;
+}
+
+.countdown-number {
+   font-family: 'Monaco', monospace;
+   font-size: 2rem;
+   font-weight: 700;
+   color: #ffd700;
+   text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+   line-height: 1;
+}
+
+.countdown-label {
+   font-size: 0.8rem;
+   color: #ffd700;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-top: 5px;
+   text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+}
+
+.about {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.about iframe {
+    margin: 40px auto;
+    height: 500px;
+    width: min(700px, 100%);
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.moreinfo {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.moreinfo img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-color: black;
+}
+
+.moreinfo h4 {
+    margin: 40px 0 20px;
+    font-size: 1.5rem;
+    color: #002868;
+}
+
+.moreinfo ul{
+    list-style: none;
+}
+
+.schedule {
+    padding: 40px 20px;
+}
+
+.schedule h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.schedule img {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    width: 90%;
+    height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.tournament-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.opener {
+    text-align: center;
+    margin: 60px 0 40px;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.opener h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #002868;
+}
+
+.opener img {
+    max-width: 60%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.tournament-stage {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-left: 6px solid #007A33;
+    border-right: 6px solid #BF0A30;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-stage:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gpstage,
+.r32,
+.r16,
+.qf,
+.sf,
+.final {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-left: 6px solid #ffd700;
+    border-right: 6px solid #ffd700;
+}
+
+.final ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.final h4 {
+    font-size: 1.3rem;
+    color: #002868;
+    margin: 15px 0;
+}
+
+.button-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+.button {
+    background: linear-gradient(135deg, #007A33 0%, #005a24 100%);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #008a39 0%, #006628 100%);
+    color: #ffffff;
+}
+
+.bigger {
+    font-size: 3em;
+    font-weight: normal;
+    transition: transform 0.3s ease;
+}
+
+.bigger:hover {
+    transform: scale(1.1);
+}
+
+.bolder {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.united {
+    font-size: 1.8em;
+    font-weight: 600;
+    background: linear-gradient(45deg, white, #007A33, #BF0A30);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.northa {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #002868;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(255,255,255,0.9);
+}
+
+.links {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    border-top: 3px solid #002868;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.links h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #002868;
+}
+
+.links .block {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.links .block p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+}
+
+.links .block a {
+    color: #007A33;
+    font-weight: 600;
+}
+
+.footer {
+    background-color: #002868;
+    color: #ffffff;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar {
+    background-color: #000000;
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .navbar ul li a {
+    color: #e0e0e0;
+}
+
+.dark-mode .navbar ul li a:hover {
+    background-color: #BF0A30;
+    color: #ffffff;
+}
+
+.dark-mode .navbar button {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+        url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/1920px-Flag_of_the_United_States_%28Web_Colors%29.svg.png');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    border: 1px solid #333;
+    animation: buttonFlagRotate 12s infinite;
+}
+
+/* Button Flag Rotation Animation */
+@keyframes buttonFlagRotate {
+    0%, 33% { 
+        background-image: 
+            linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+            url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_the_United_States_%28Web_Colors%29.svg/1920px-Flag_of_the_United_States_%28Web_Colors%29.svg.png');
+    }
+    34%, 66% { 
+        background-image: 
+            linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+            url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1920px-Flag_of_Canada_%28Pantone%29.svg.png');
+    }
+    67%, 100% { 
+        background-image: 
+            linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
+            url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png');
+    }
+}
+
+.dark-mode .about {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .tournament-stage,sf {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border-left: 6px solid #007A33;
+    border-right: 6px solid #BF0A30;
+}
+
+.dark-mode .final {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    color: #e0e0e0;
+    border-left: 6px solid #ffd700;
+    border-right: 6px solid #ffd700;
+}
+
+.dark-mode .links {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .links h2,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+    color: #4a9eff;
+}
+
+.dark-mode .links .block a {
+    color: #4a9eff;
+}
+
+.dark-mode .links .block a:hover {
+    color: #007A33;
+}
+
+.dark-mode .footer {
+    background-color: #000000;
+    color: #e0e0e0;
+    border-top: 1px solid #333;
+}
+
+.dark-mode .button {
+    background: linear-gradient(135deg, #005a24 0%, #003d18 100%);
+}
+
+.dark-mode .button:hover {
+    background: linear-gradient(135deg, #8B0000 0%, #5a0000 100%);
+}
+
+/* RSVP Section */
+#rsvp {
+    padding: 20px 20px;
+    background-color: #ffffff;
+    margin: 40px 0;
+}
+
+#rsvp h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #002868;
+}
+
+.rsvp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.rsvp-para {
+    width: 55%;
+    padding-right: 10px;
+}
+
+.rsvp-participants {
+    width: 45%;
+    padding-right: 10px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#rsvp-form {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#rsvp-form label {
+    font-weight: normal;
+    color: #333333;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#rsvp-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#rsvp-form input:focus {
+    border-color: #007A33;
+    outline: none;
+}
+
+#rsvp-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#rsvp-button:hover {
+    background-color: #45a049;
+}
+
+.error {
+  border: 2px solid red;
+  background-color: #ffe6e6;
+}
+
+#rsvp-count {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #007A33;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8fff9;
+    border-radius: 8px;
+    border: 2px solid #007A33;
+}
+
+/* Dark mode for RSVP */
+.dark-mode #rsvp {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+.dark-mode .rsvp-participants {
+    background-color: #1a1a1a;
+}
+
+.dark-mode #rsvp-form input {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+.dark-mode #rsvp-form label {
+    color: #e0e0e0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    padding: 50px;
+    width: 55%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #002868 0%, #007A33 100%);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Monaco', monospace;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.modal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal-image {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease;
+}
+
+#modal-text {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    line-height: 1;
+    padding: 0;
+}
+
+.modal-close-btn:hover {
+    background-color: #BF0A30;
+    border-color: #BF0A30;
+    transform: scale(1.1);
+}
+
+.modal-close-btn:active {
+    transform: scale(0.95);
+}
